@@ -1,5 +1,3 @@
-# Zadaci
-
 ## 1. (Izrazi)
 **a.** not 4 * 2 < 8 or (3 + 5) / 2 == 4
 
@@ -80,3 +78,101 @@
 books = {"Marko": 320, "Ana": 290, "Jovan": 410}
 winner = max(books, key=books.get)
 print(f"Pobjednik je {winner} sa {books[winner]} strana.")
+```
+**b.** Program za broj rečenica:
+
+```python
+text = input("Unesite tekst: ")
+sentences = sum(1 for char in text if char in ".!?")
+print(f"Broj rečenica: {sentences}")
+```
+**c.** Program za presjek lista bez ugrađenih funkcija:
+
+```python
+a = [1, 2, 3, 4, 5]
+b = [3, 4, 5, 6, 7]
+intersection = []
+for num in a:
+    if num in b and num not in intersection:
+        intersection.append(num)
+print(intersection)
+```
+## 5. (Petlje)
+
+**a.**
+
+```python
+i = 12 
+while i <= 16: 
+    print(i) 
+    i = i + 2
+```
+Štampa `12, 14, 16` → ukupno 3 puta.
+
+**b.**
+
+```python
+x = 5
+for i in range(4):
+    x = x + i
+print(x)
+```
+`x = 5 + 0 + 1 + 2 + 3 = 11`.
+**c.**
+
+```python
+s = 0 
+while s < 10: 
+     print(s) 
+     s = s - 5
+```
+Beskonačna petlja (smanjuje `s`, nikad ne dostiže `10`).
+
+**d.**
+
+```python
+i = 0 
+while i > 5: 
+    print (i) 
+    i = i + 2
+```
+Nikada se ne izvršava (`0 > 5` je `False`).
+
+**e.**
+
+```python
+i = 26 
+while i > 5: 
+    if i % 2 == 0: 
+         print(i) 
+         i = i / 2
+    else:    
+         i = i - 1
+```
+  1. `26 → 13`
+  2. `13 → 12`
+  3. `12 → 6`
+  4. `6 → 3` → petlja staje.
+  Ukupno 4 puta.
+
+**f.**
+
+```python
+s = 1
+for i in range(5):
+    s = s * 2 
+print(s)
+```
+`1 → 2 → 4 → 8 → 16 → 32` → rezultat `32`.
+
+**g.**
+
+```python
+p = 0
+lista = [11, 21, 32, 40, 50]
+for i in range(len(lista)):
+    if i % 2 == 0:
+        p = p + lista[i]
+```
+Sabrani su elementi na parnim indeksima `(0, 2, 4)`:
+`11 + 32 + 50 = 93`.
